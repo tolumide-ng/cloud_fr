@@ -30,7 +30,7 @@ describe.only('Servers Page', () => {
     expect(mockFetchServers).toHaveBeenCalledTimes(1);
   });
 
-  test('should render empty message when the the data is fetched and empty', async () => {
+  test('should render empty message when the data is fetched and empty', async () => {
     const mockFetchServers = jest.fn();
     mockHook(mockFetchServers, 'success', []);
 

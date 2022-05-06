@@ -5,7 +5,7 @@ import { CardSection } from 'components/Card/CardSection';
 import { Server } from 'components/Server';
 import React, { useMemo } from 'react';
 import useServers from './useServers';
-import { serverPageStles } from './styles';
+import { serverPageStyles } from './styles';
 
 export const ServersPage = () => {
   const { servers, fetchServers } = useServers();
@@ -16,7 +16,7 @@ export const ServersPage = () => {
 
   return (
     <Card>
-      <style jsx>{serverPageStles}</style>
+      <style jsx>{serverPageStyles}</style>
       <CardHead title="Servers" />
       <CardContent>
         {/* success and user has servers */}

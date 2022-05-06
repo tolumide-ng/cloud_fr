@@ -1,16 +1,16 @@
 import { request } from 'api/apiClient';
 import React, { useState } from 'react';
-import { IServer } from 'upcloud';
+import { IServer, TAppState } from 'upcloud';
 
 interface IState {
-  state: 'rest' | 'loading' | 'success' | 'failure';
+  state: TAppState;
   data: ReadonlyArray<IServer> | null;
 }
 
 const useServers = () => {
   const [servers, setServers] = useState<IState>({
     state: 'rest',
-    data: [],
+    data: null,
   });
 
   const fetchServers = async () => {
@@ -19,7 +19,7 @@ const useServers = () => {
       const response = await request({ method: 'get', url: '/server' });
       setServers({ state: 'success', data: response.data.servers.server });
     } catch (error) {
-      setServers({ state: 'success', data: null });
+      setServers({ state: 'failure', data: null });
     }
   };
 

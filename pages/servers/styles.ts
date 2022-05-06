@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css';
 
-const serverPageStles = css`
+const serverPageStyles = css`
   @import 'rem';
   @import 'color';
 
@@ -11,4 +11,4 @@ const serverPageStles = css`
   }
 `;
 
-export { serverPageStles };
+export { serverPageStyles };
