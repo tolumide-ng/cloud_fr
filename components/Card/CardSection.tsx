@@ -9,9 +9,9 @@ interface ICardSectionProps {
  * Sections for the <Card> component; adds separators between sections. Should be placed inside <Card.Content>
  */
 export const CardSection = ({ children }: ICardSectionProps) => (
-  <div className="Card__Section Card__Padding">
+  <li className="Card__Section Card__Padding" tabIndex={0}>
     <style jsx>{commonCardStyles}</style>
     <style jsx>{cardSectionStyles}</style>
     {children}
-  </div>
+  </li>
 );

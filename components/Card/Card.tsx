@@ -15,7 +15,7 @@ export class Card extends React.PureComponent {
   render() {
     const { children } = this.props;
     return (
-      <section className="Card">
+      <section className="Card" data-testid="card">
         <style jsx>{cardStyles}</style>
         {children}
       </section>

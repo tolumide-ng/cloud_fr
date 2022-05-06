@@ -1,9 +1,11 @@
 export interface IServer {
   hostname: string;
-  state: 'started' | 'stopped' | 'error' | 'maintenance';
+  state: TServerState;
   title: string;
   uuid: string;
 }
+
+export type TServerState = 'started' | 'stopped' | 'error' | 'maintenance';
 
 export interface IStorage {
   size: number;

@@ -15,6 +15,7 @@ const cardStyles = css`
     background-color: color(white);
     border: 1px solid color(grey, card-border);
     box-sizing: border-box;
+    margin-top: 1rem;
   }
 `;
 
@@ -68,6 +69,7 @@ const cardSectionStyles = css`
   @import 'rem';
 
   .Card__Section {
+    list-style: none;
     /* remove the padding created by Card__Content, and apply our own padding so we get a smooth border-top */
     margin: 0 rem(-20px);
     padding: 0 rem(20px);
